@@ -1,0 +1,32 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>START1</title>
+</head>
+<body>
+
+<h1>Start UP</h1>
+
+<p>döner</p>
+<button onclick="oyVer('döner')">Oy Ver</button>
+
+<p>hamburger</p>
+<button onclick="oyVer('hamburger')">Oy Ver</button>
+
+<h2>Oy Sonuçları:</h2>
+<p id="sonuc">Henüz oy yok</p> 
+
+
+<button onclick="sifirla()">Sıfırla</button>
+
+<script>
+let oylar = {
+    "döner": 0,
+    "hamburger": 0
+};
+
+function oyVer(secenek) {
+    oylar[secenek]++;
+    document.getElementById("sonuc").innerText = 
+        "Döner: " + oylar["döner"] + " | Hamburger: " + oylar["hamburger"];
+}
