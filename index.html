@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>START1</title>
@@ -16,7 +16,6 @@
 <h2>Oy Sonuçları:</h2>
 <p id="sonuc">Henüz oy yok</p> 
 
-
 <button onclick="sifirla()">Sıfırla</button>
 
 <script>
@@ -30,3 +29,13 @@ function oyVer(secenek) {
     document.getElementById("sonuc").innerText = 
         "Döner: " + oylar["döner"] + " | Hamburger: " + oylar["hamburger"];
 }
+
+function sifirla() {
+    oylar["döner"] = 0;
+    oylar["hamburger"] = 0;
+    document.getElementById("sonuc").innerText = "Henüz oy yok";
+}
+</script>
+
+</body>
+</html>
